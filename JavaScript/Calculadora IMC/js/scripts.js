@@ -78,6 +78,8 @@ function createTable(data) {
 function cleanInputs() {
   heightInput.value = "";
   weightInput.value = "";
+  imcNumber.classList = "";
+  imcInfo.classList = "";
 }
 
 function validDigits(text) {
@@ -130,10 +132,38 @@ calcBtn.addEventListener("click", (e) => {
   imcNumber.innerText = imc;
   imcInfo.innerText = info;
 
+  switch (info) {
+    case "Magreza":
+      imcNumber.classList.add("low");
+      imcInfo.classList.add("low");
+      break;
+    case "Normal":
+      imcNumber.classList.add("good");
+      imcInfo.classList.add("good");
+      break;
+    case "Sobrepeso":
+      imcNumber.classList.add("low");
+      imcInfo.classList.add("low");
+      break;
+    case "Obesidade":
+      imcNumber.classList.add("medium");
+      imcInfo.classList.add("medium");
+      break;
+    case "Obesidade grave":
+      imcNumber.classList.add("hight");
+      imcInfo.classList.add("hight");
+      break;
+  }
+
   showOrHideResults();
 });
 
 clearBtn.addEventListener("click", (e) => {
   e.preventDefault();
   cleanInputs();
+});
+
+backBtn.addEventListener("click", () => {
+  cleanInputs();
+  showOrHideResults();
 });
