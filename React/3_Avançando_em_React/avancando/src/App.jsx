@@ -6,6 +6,9 @@ import night from "./assets/night.jpg";
 // 3 - useState
 import Data from "./components/Data.jsx";
 
+// 4 - renderização de lista
+import ListRender from "./components/ListRender.jsx";
+
 function App() {
   return (
     <div className="App">
@@ -16,6 +19,8 @@ function App() {
       <img src={night} alt="noite" />
       {/* 3 - useState */}
       <Data />
+      {/* 4 - renderização de lista */}
+      <ListRender />
     </div>
   );
 }
