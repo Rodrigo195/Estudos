@@ -9,6 +9,9 @@ import TemplateExpression from "./components/TemplateExpression";
 
 // 5 - hierarquia de componentes
 
+// 6 - Eventos
+import Events from "./components/Events";
+
 function App() {
   return (
     // 3 - comentarios
@@ -18,6 +21,7 @@ function App() {
       <FirstComponent />
       <TemplateExpression />
       <MyComponent />
+      <Events />
     </>
   );
 }
