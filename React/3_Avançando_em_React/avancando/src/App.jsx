@@ -2,6 +2,7 @@ import "./App.css";
 
 // 2 - imagem em assets
 import night from "./assets/night.jpg";
+import ConditionalRender from "./components/ConditionalRender.jsx";
 
 // 3 - useState
 import Data from "./components/Data.jsx";
@@ -21,6 +22,8 @@ function App() {
       <Data />
       {/* 4 - renderização de lista */}
       <ListRender />
+      {/* 7 - render conditional */}
+      <ConditionalRender />
     </div>
   );
 }
